@@ -77,7 +77,9 @@ h6 {
 }
 
 .logo span {
-    color: #999;
+    color: #fff;
+    font-weight: 300;
+    font-size: 20px;
 }
 
 /**** Start Background Color ****/
@@ -121,6 +123,7 @@ h6 {
 .menu-item a i {
     font-size: 50px;
     padding-bottom: 2px;
+    color: #FFC400;
 }
 
 .menu-item:hover a {
