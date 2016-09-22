@@ -28,12 +28,12 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover, a:focus, a.focus, a:visited, a.visited {
     text-decoration: none;
 }
 
 p {
-    font-size: 13px;
+    font-size: 1.2em;
 }
 
 h2,
@@ -42,14 +42,13 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
 }
 
 /**** Start Section Title Section ****/
 
 .section-title h3{
-    color: #666 !important;
+    color: #3B434B !important;
     //font-style: italic;
     font-size: 28px;
     text-transform: none;
@@ -198,3 +197,71 @@ and (max-width : 1199px) {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+.copyright .design a:hover, .copyright .design a:focus, .copyright .design a:visited {
+    text-decoration: none;
+    color: #FFC400;
+}
+
+/**** Start Modal Section ****/
+
+.section-modal .modal-content {
+    padding: 70px 0 !important;
+    min-height: 100%;
+    border: 0 !important;
+    border-radius: 0;
+    background-clip: border-box;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    color: #888;
+    font-weight: 300;
+}
+
+.section-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.section-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.section-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    background-color: #222;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.section-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    background-color: #222;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+/**** Start Experience Section ****/
+
+.experience h4  {
+    color: #3B434B;
+}
+
+.experience h6 {
+    color: #FFC400;
+    font-size: 1.2em;
+}
+
+
