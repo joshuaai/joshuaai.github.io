@@ -276,6 +276,10 @@ and (max-width : 1199px) {
     color: #FFC400;
 }
 
+.experience img {
+    max-width: 200px;
+    height: auto;
+}
 
 /**** Start ABout Us Section ****/
 
