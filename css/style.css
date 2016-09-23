@@ -344,3 +344,208 @@ and (max-width : 1199px) {
   transition: all .5s ease-in-out;
 }
 
+/**** Start Contact Section ****/
+
+
+.footer-contact-info {
+    background: #FFC400;
+    color: #fff;
+    padding: 20px 30px;
+    //margin-top: 80px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.footer-contact-info .lastp {
+    margin-bottom: 3px;
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 991px) {
+    
+    .footer-contact-info {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    
+}
+
+.footer-contact-info ul {
+    padding-bottom: 10px;
+}
+
+.footer-contact-info h4 {
+    padding-bottom: 10px;
+}
+
+.footer-contact-info li strong {
+    font-weight: 600;
+}
+
+
+.footer-social {
+    padding: 78px 0;
+    border: 1px solid #FFC400;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.footer-social li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+@media only screen and (max-width : 360px) {
+    
+    .footer-social li {
+        padding: 0 5px;
+    }
+    
+}
+
+.footer-social li a {
+    background: #FFC400;
+    padding: 8px;
+    color: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #FFC400;
+    
+}
+
+.footer-social li i {
+    font-size: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+.footer-social li:hover a {
+    background: #fff;
+    //border: 1px solid #FFC400;
+    color: #666;
+}
+
+
+
+.contact .btn-primary {
+    padding: 20px;
+    font-size: 16px;
+}
+
+.contact .btn-primary:hover {
+    background: transparent;
+}
+
+.contact .section-title h3{
+    color: #fff;
+}
+
+.contact .section-heading {
+    color: #fff;
+}
+
+.contact .form-group {
+    margin-bottom: 25px;
+}
+
+.contact .form-group input,
+.contact .form-group textarea {
+    padding: 20px;
+}
+
+.contact .form-group input.form-control {
+    height: auto;
+}
+
+.contact .form-group textarea.form-control {
+    height: 236px;
+}
+
+.contact::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+.contact:-moz-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+.contact::-moz-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+.contact:-ms-input-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+.contact .text-danger {
+    color: #e74c3c;
+}
+
+.contact button {
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.contact .btn-primary {
+    padding: 20px;
+    font-size: 16px;
+}
+
+.contact .btn-primary:hover {
+    background: transparent;
+    color: #3B434B;
+}
+
+.contact .btn-primary:focus, .contact .btn-primary.focus, .contact .btn-primary:visited {
+    border-color: #FFC400;
+    background-color: #FFC400;
+    color: #fff;
+}
+
+/* Bootstrap Custom */
+.contact .btn-primary {
+    border-color: #FFC400;
+    background-color: #FFC400;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fff;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -o-border-radius:3px;
+    border-radius:3px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    color: #fff;
+    border-color: #3B434B;
+    background-color: none !important;
+}
+
+
