@@ -1,0 +1,106 @@
+---
+const education = [
+  {
+    institution: 'Meltwater Entrepreneurial School of Technology (MEST)',
+    location: 'Accra, Ghana',
+    credential: 'Software Development & Entrepreneurship',
+    period: '2016 – 2017',
+  },
+  {
+    institution: 'Federal University of Technology, Owerri (FUTO)',
+    location: 'Owerri, Nigeria',
+    credential: 'B.Eng Electrical & Electronics Engineering',
+    period: '2009 – 2014',
+  },
+];
+---
+
+<section id="education">
+  <div class="container">
+    <p class="section-label">Education</p>
+
+    <div class="edu-list">
+      {education.map((item) => (
+        <div class="edu-item">
+          <div class="edu-main">
+            <span class="institution">{item.institution}</span>
+            <span class="credential">{item.credential}</span>
+          </div>
+          <div class="edu-meta">
+            <span class="edu-location">{item.location}</span>
+            <span class="edu-period">{item.period}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .edu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .edu-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .edu-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .institution {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .credential {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  .edu-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+    flex-shrink: 0;
+  }
+
+  .edu-location {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+
+  .edu-period {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+
+  @media print {
+    .institution { font-size: 10pt; }
+    .credential, .edu-location, .edu-period { font-size: 8.5pt; }
+  }
+
+  @media (max-width: 500px) {
+    .edu-item { flex-direction: column; gap: 0.5rem; }
+    .edu-meta { align-items: flex-start; }
+  }
+</style>
