@@ -84,10 +84,10 @@ const skillGroups = [
   }
 
   @media print {
-    .skill-group { grid-template-columns: 140px 1fr; gap: 0.5rem; }
+    .skill-groups { gap: 0.7rem; }
+    .skill-group { grid-template-columns: 140px 1fr; gap: 0.4rem; break-inside: avoid; }
     .group-label { font-size: 8pt; }
     .tag { font-size: 8pt; padding: 0.15rem 0.5rem; border-color: #ccc; background: none; }
-    .skill-groups { gap: 1rem; }
   }
 
   @media (max-width: 500px) {

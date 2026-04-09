@@ -5,9 +5,13 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "gen:cv": "astro build && node scripts/generate-cv.mjs"
   },
   "dependencies": {
     "astro": "^4.15.0"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.40.0"
   }
 }

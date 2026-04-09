@@ -225,14 +225,14 @@ const roles = [
   }
 
   @media print {
-    .role { border-left-color: #ccc; padding-left: 1rem; }
+    .role { border-left-color: #ccc; padding-left: 1rem; break-inside: avoid; }
     .role::before { background: var(--accent); }
     .company-name { font-size: 11pt; }
     .position-title { font-size: 9.5pt; }
     .position-period, .company-meta { font-size: 8pt; }
     .highlights li { font-size: 9pt; opacity: 1; }
     .highlights { gap: 0.4rem; }
-    .timeline { gap: 2rem; }
+    .timeline { gap: 1.4rem; }
   }
 
   @media (max-width: 480px) {

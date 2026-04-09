@@ -87,7 +87,7 @@ p { color: var(--text); opacity: 0.85; }
     --text: #111111;
     --muted: #555555;
     --accent: #4a3fd0;
-    --section-gap: 1.8rem;
+    --section-gap: 1.2rem;
   }
 
   body {
@@ -101,16 +101,8 @@ p { color: var(--text); opacity: 0.85; }
 
   section {
     padding: var(--section-gap) 0;
-    break-inside: avoid;
   }
 
   a { color: var(--accent); text-decoration: none; }
-
-  /* Show href for external links */
-  a[href^="http"]::after {
-    content: " (" attr(href) ")";
-    font-size: 0.8em;
-    color: var(--muted);
-  }
-  a[href^="mailto"]::after { content: none; }
+  a::after { content: none !important; }
 }
