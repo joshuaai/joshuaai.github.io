@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Experience from '../components/Experience.astro';
+import Skills from '../components/Skills.astro';
+import Education from '../components/Education.astro';
+import Achievements from '../components/Achievements.astro';
+
+import '../styles/global.css';
+---
+
+<BaseLayout>
+  <main class="container">
+    <Hero />
+    <Experience />
+    <Skills />
+    <Education />
+    <Achievements />
+
+    <footer class="site-footer no-print">
+      <span>Joshua A. Ihejiamaizu</span>
+      <span class="footer-dot">·</span>
+      <a href="https://github.com/joshuaai/joshuaai.github.io" target="_blank" rel="noopener">Source</a>
+    </footer>
+  </main>
+</BaseLayout>
+
+<style>
+  main {
+    padding-bottom: 4rem;
+  }
+
+  .site-footer {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+  }
+
+  .footer-dot { opacity: 0.4; }
+  .site-footer a { color: var(--muted); }
+  .site-footer a:hover { color: var(--text); }
+</style>

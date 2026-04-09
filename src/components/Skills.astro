@@ -1,0 +1,96 @@
+---
+const skillGroups = [
+  {
+    label: 'Languages',
+    tags: ['TypeScript', 'JavaScript', 'HTML', 'CSS'],
+  },
+  {
+    label: 'Browser & Platform',
+    tags: ['Web APIs', 'DOM', 'WebSockets', 'Service Workers', 'Web Performance', 'Browser SDKs', 'Core Web Vitals'],
+  },
+  {
+    label: 'Frameworks & Tools',
+    tags: ['React', 'Astro', 'Node.js', 'Webpack', 'Vite', 'Jest', 'Playwright'],
+  },
+  {
+    label: 'Engineering',
+    tags: ['Micro-frontends', 'Design Systems', 'Observability', 'Privacy Engineering', 'SDK Architecture', 'Performance Profiling'],
+  },
+];
+---
+
+<section id="skills">
+  <div class="container">
+    <p class="section-label">Skills</p>
+
+    <div class="skill-groups">
+      {skillGroups.map((group) => (
+        <div class="skill-group">
+          <span class="group-label">{group.label}</span>
+          <div class="tags">
+            {group.tags.map((tag) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .skill-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .skill-group {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0.75rem;
+    align-items: start;
+  }
+
+  .group-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding-top: 0.3rem;
+    letter-spacing: 0.03em;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    opacity: 0.85;
+    transition: border-color 0.15s, opacity 0.15s;
+  }
+
+  .tag:hover {
+    border-color: var(--accent-dim);
+    opacity: 1;
+  }
+
+  @media print {
+    .skill-group { grid-template-columns: 140px 1fr; gap: 0.5rem; }
+    .group-label { font-size: 8pt; }
+    .tag { font-size: 8pt; padding: 0.15rem 0.5rem; border-color: #ccc; background: none; }
+    .skill-groups { gap: 1rem; }
+  }
+
+  @media (max-width: 500px) {
+    .skill-group { grid-template-columns: 1fr; gap: 0.4rem; }
+  }
+</style>

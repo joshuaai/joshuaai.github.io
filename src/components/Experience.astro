@@ -1,0 +1,215 @@
+---
+const roles = [
+  {
+    company: 'Hotjar | by Contentsquare',
+    location: 'Berlin, Germany · Remote',
+    url: 'https://www.hotjar.com',
+    tenure: '3 yrs 10 mos',
+    positions: [
+      { title: 'Staff Software Engineer', period: 'May 2024 – Present' },
+      { title: 'Senior Software Engineer, Frontend', period: 'Jul 2022 – Apr 2024' },
+    ],
+    highlights: [
+      'Lead engineer for the high-performance JavaScript SDK powering Hotjar\'s global data collection and Contentsquare\'s Digital Experience Analytics platform.',
+      'Responsible for the design, scalability, and reliability of core tracking modules deployed on millions of SMB and mid-market websites, capturing billions of user interactions daily.',
+      'Designed, led, and contributed to multiple platform-level initiatives including end-to-end observability, performant client-side compression, WebSocket fidelity improvements, asynchronous DOM snapshot capturing, and a robust privacy and compliance engine.',
+      'Continuously deploying to over 1 million active sites per day while maintaining the reliability and performance expectations of a critical third-party script.',
+    ],
+  },
+  {
+    company: 'HelloFresh',
+    location: 'Berlin, Germany',
+    url: 'https://www.hellofresh.com',
+    tenure: '3 yrs 5 mos',
+    positions: [
+      { title: 'Senior Frontend Engineer', period: 'Jan 2021 – Jun 2022' },
+      { title: 'Software Engineer (Frontend)', period: 'Feb 2019 – Dec 2020' },
+    ],
+    highlights: [
+      'Drove coherent product architecture and engineering processes across the WAC (Weekly Active Customers) tribe within HelloTech.',
+      'Authored a comprehensive appraisal of HelloFresh\'s micro-frontend architecture across nine critical areas; identified bottlenecks and proposed a monorepo-aligned solution.',
+      'Introduced the Block component, laying the foundation for a fully atomic design system that eliminated unconstrained style inheritance.',
+      'Delivered a declarative, config-driven, framework-agnostic routing upgrade for the account settings fragment, replacing a complex imperative setup.',
+      'Built a unified forms API in standard HTML format that resolved duplicate and divergent implementations across services, standardising validation and improving customer interactions.',
+    ],
+  },
+  {
+    company: 'Generation Enterprise · Simulate Education',
+    location: 'Lagos, Nigeria · Accra, Ghana',
+    url: null,
+    tenure: '~2 yrs',
+    positions: [
+      { title: 'Software Engineer & Product Lead · Co-Founder', period: '2017 – 2019' },
+    ],
+    highlights: [
+      'Co-founded and led product and engineering for Simulate Education, a micro-learning platform for corporate training in the banking sector.',
+      'Built and shipped SkillNav, a ratings and career navigation tool for SMEs across Nigeria, Ghana, and Kenya.',
+    ],
+  },
+];
+---
+
+<section id="experience">
+  <div class="container">
+    <p class="section-label">Experience</p>
+
+    <div class="timeline">
+      {roles.map((role) => (
+        <article class="role">
+          <div class="role-header">
+            <div class="role-company-block">
+              {role.url ? (
+                <a href={role.url} target="_blank" rel="noopener" class="company-name">{role.company}</a>
+              ) : (
+                <span class="company-name">{role.company}</span>
+              )}
+              <span class="company-meta">
+                <span>{role.location}</span>
+                <span class="meta-dot">·</span>
+                <span class="tenure">{role.tenure}</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="positions">
+            {role.positions.map((pos) => (
+              <div class="position-row">
+                <span class="position-title">{pos.title}</span>
+                <span class="position-period">{pos.period}</span>
+              </div>
+            ))}
+          </div>
+
+          <ul class="highlights">
+            {role.highlights.map((h) => (
+              <li>{h}</li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .role {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-left: 1.25rem;
+    border-left: 2px solid var(--border);
+    position: relative;
+  }
+
+  .role::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+  }
+
+  .role-company-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .company-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+
+  a.company-name:hover { color: var(--accent); }
+
+  .company-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+
+  .meta-dot { opacity: 0.5; }
+
+  .positions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .position-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .position-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+    opacity: 0.9;
+  }
+
+  .position-period {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .highlights {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0.25rem;
+  }
+
+  .highlights li {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--text);
+    opacity: 0.8;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .highlights li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    opacity: 0.6;
+  }
+
+  @media print {
+    .role { border-left-color: #ccc; padding-left: 1rem; }
+    .role::before { background: var(--accent); }
+    .company-name { font-size: 11pt; }
+    .position-title { font-size: 9.5pt; }
+    .position-period, .company-meta { font-size: 8pt; }
+    .highlights li { font-size: 9pt; opacity: 1; }
+    .highlights { gap: 0.4rem; }
+    .timeline { gap: 2rem; }
+  }
+
+  @media (max-width: 480px) {
+    .position-row { flex-direction: column; gap: 0.1rem; }
+  }
+</style>

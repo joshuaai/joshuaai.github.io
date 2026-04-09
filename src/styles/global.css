@@ -1,0 +1,116 @@
+/* ─── Variables ─────────────────────────────────────────────────── */
+:root {
+  --bg:         #090910;
+  --surface:    #0f0f1a;
+  --border:     #1a1a2e;
+  --text:       #e2e2ee;
+  --muted:      #6868a0;
+  --accent:     #7c6afa;
+  --accent-dim: #3b3580;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  --max-w: 780px;
+  --section-gap: 4rem;
+}
+
+/* ─── Reset ─────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+a:hover { color: #a898ff; }
+
+/* ─── Layout ─────────────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ─── Section ────────────────────────────────────────────────────── */
+section {
+  padding: var(--section-gap) 0;
+  border-top: 1px solid var(--border);
+}
+
+section:first-of-type { border-top: none; }
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* ─── Typography ─────────────────────────────────────────────────── */
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 2.75rem); }
+h2 { font-size: 1.1rem; color: var(--text); }
+h3 { font-size: 0.95rem; font-weight: 500; color: var(--muted); }
+
+p { color: var(--text); opacity: 0.85; }
+
+/* ─── Print ───────────────────────────────────────────────────────── */
+@media print {
+  :root {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --border: #d0d0d0;
+    --text: #111111;
+    --muted: #555555;
+    --accent: #4a3fd0;
+    --section-gap: 1.8rem;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+
+  .no-print { display: none !important; }
+
+  section {
+    padding: var(--section-gap) 0;
+    break-inside: avoid;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+
+  /* Show href for external links */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: var(--muted);
+  }
+  a[href^="mailto"]::after { content: none; }
+}
