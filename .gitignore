@@ -22,3 +22,6 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# PDF
+*.pdf
